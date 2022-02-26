@@ -2,10 +2,8 @@ import java.io.*;
 import java.util.*;
 
 /**
- * 
- * CHECKPOINT#3 CORE ALGORITHM
  * GenreShelf - basic code implementation 
- * ISTE 612 
+ *  
  */
 
 public class genre{
@@ -213,21 +211,15 @@ public class genre{
 		}
 
 		double accuracy= (double)(trueNegative+truePositive)/totalTestDocs;	
-		double precision = truePositive/(truePositive+falsePositive+0.0);
-		double recall = truePositive/(truePositive+falseNegative+0.0);
-		double fscore = 2*precision*recall/(precision+recall);
-		System.out.println("Accuracy="+accuracy+"\nPrecision="+precision+ "\nRecall="+recall+"\nF-Score="+fscore);	
-		System.out.println("True Positive = "+truePositive+"\tTrue Negative = "+trueNegative+"\nFalse Positive = "+falsePositive+ "\tFalse Negative = "+falseNegative);
-
+		System.out.println("Accuracy="+accuracy);	
 		return accuracy;
-
 	}
 	
 	
 	public static void main(String[] args)throws IOException{		
-		File trainData = new File("C:\\Users\\Abhin\\Desktop\\IR\\612-Final-Abhinav-Srinivasan\\IR-Project\\data\\train"); //location of file for train data
+		File trainData = new File("\\data\\train"); //location of file for train data
 		genre gn = new genre(trainData);	
-		File testData = new File("C:\\Users\\Abhin\\Desktop\\IR\\612-Final-Abhinav-Srinivasan\\IR-Project\\data\\test");	//location of file for test data
+		File testData = new File("\\data\\test");//location of file for test data
 		System.out.println("Total number of classes being classified = "+gn.numClasses);
 		gn.classifyGenre(testData);
 	}
