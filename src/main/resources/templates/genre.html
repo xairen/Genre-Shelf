@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<title>Genre-Shelf</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<header class="w3-panel w3-center w3-opacity" style="padding:32px 16px">
+  <h1 class="w3-xlarge">GENRE-SHELF</h1>
+  <h3>AUTOMATED GENRE CLASSIFICATION</h3>
+
+  <div class="w3-padding-32">
+    <div class="w3-bar w3-border">
+      <a href="home.html" class="w3-bar-item w3-button">Home</a>
+      <a href="booklist.html" class="w3-bar-item w3-button w3-light-grey">BookList</a>
+      <a href="genre.html" class="w3-bar-item w3-button">Genres</a>
+    </div>
+  </div>
+</header>
+
+    <form th:object="${lecture}" method="post">
+        <div>
+            <label>Genre: </label>
+            <input type="text" name="genreSearch" th:value="${genreSearch}">
+            <input type="submit" value="Search">
+        </div>
+    </form>
+
+    <table>
+        <tr>
+            <th>Book Name</th>
+            <th>Author Name</th>
+            <th>Book Summary</th>
+        </tr>
+        <tr>
+            <td>Data</td>
+            <td>Data</td>
+            <td>Data</td>
+        </tr>
+    </table>
+
+
+    <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Autobiography</h1>
+      <p>Book Title : </p>
+      <p>Author Name : </p>
+      <p>Summary : </p>
+    </div>
+    </div>
+</div>
+
+   <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Children's Literature</h1>
+      <p>Book Title : </p>
+      <p>Author Name : </p>
+      <p>Summary : </p>
+  </div>
+</div>
+
+     <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Fantasy</h1>
+      <p>Book Title : </p>
+      <p>Author Name : </p>
+      <p>Summary : </p>
+  </div>
+</div>
+
+    <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Mystery</h1>
+      <p>Book Title : </p>
+      <p>Author Name : </p>
+      <p>Summary : </p>
+    </div>
+    </div>
+
+
+     <div class="w3-row">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Speculative Fiction</h1>
+      <p>Book Title : </p>
+      <p>Author Name : </p>
+      <p>Summary : </p>
+  </div>
+</div>
+</div>
+
+<p> Book: The Bridge of Light Predicted genre: Actual genre: ['Science Fiction'] Book: Ring Predicted genre: Actual genre: ['Speculative fiction', 'Horror'] Book: Hades' Daughter Predicted genre:  Actual genre: ['Speculative fiction', 'Fantasy'] Book: The Skeleton in the Clock Predicted genre: 'Mystery', Actual genre: ['Mystery', 'Detective fiction', 'Novel'] Book: A Princess of Landover Predicted genre: 'Fantasy', Actual genre: ['Fantasy'] Book: The Ship Predicted genre:  Actual genre: ['Historical fiction', 'Fiction'] Book: A Corner of the Universe Predicted genre:  Actual genre: ["Children's literature", 'Fiction'] Book: The League of Frightened Men Predicted genre: 'Detective fiction', 'Fiction', 'Mystery', 'Suspense' Actual genre: ['Mystery', 'Detective fiction', 'Fiction', 'Suspense'] Book: Eaters of the Dead Predicted genre: 'Speculative fiction', Actual genre: ['Speculative fiction', 'Historical fiction', 'Fantasy', 'Fiction', 'Historical n Book: Salt Predicted genre:  Actual genre: ['Science Fiction', 'Speculative fiction'] Book: The Final Prophecy Predicted genre: 'Science Fiction', Actual genre: ['Science Fiction', 'Speculative fiction'] Book: Gather Together in My Name Predicted genre:  Actual genre: ['Autobiography'] Book: Invisible Monsters Predicted genre: 'Fiction', 'Novel' Actual genre: ['Speculative fiction', 'Fiction', 'Novel'] Book: Things Hoped For Predicted genre:  Actual genre: ['Science Fiction', "Children's literature"] Book: Might As Well Be Dead Predicted genre: 'Detective fiction', 'Fiction', 'Mystery', 'Suspense' Actual genre: ['Mystery', 'Detective fiction', 'Fiction', 'Suspense'] Book: The Yiddish Policemen's Union: A Novel Predicted genre:  Actual genre: ['Alternate history', 'Fiction', 'Novel'] Book: Romola Predicted genre:  Actual genre: ['Historical fiction', 'Fiction', 'Historical novel'] Book: The Dream-Quest of Unknown Kadath Predicted genre: 'Fantasy', 'Speculative fiction' Actual genre: ['Fantasy', 'Science Fiction', 'Speculative fiction', 'Horror', 'Fiction'] Book: Smiley's People Predicted genre:  Actual genre: ['Spy fiction'] Book: Pursuit of the House-Boat Predicted genre:  Actual genre: ['Fantasy', 'Fiction'] Book: Night season Predicted genre: 'Fantasy', Actual genre: ['Fantasy', 'Speculative fiction', 'Urban fantasy', 'Romance novel', 'Paranormal Book: Falling Free Predicted genre: 'Science Fiction', 'Speculative fiction' Actual genre: ['Science Fiction', 'Speculative fiction', 'Fiction'] Book: Franny and Zooey Predicted genre:  Actual genre: ['Short story', 'Fiction', 'Novella', 'Novel'] Book: The Shadow Lines Predicted genre: 'Fiction', 'Novel' Actual genre: ['Reference', 'Fiction'] Book: Plague Ship Predicted genre: 'Science Fiction', Actual genre: ['Thriller', 'Speculative fiction', 'Fiction'] Book: Devil May Care Predicted genre: 'Spy fiction', Actual genre: ['Spy fiction', 'Fiction'] Book: All the Weyrs of Pern Predicted genre: 'Science Fiction', 'Speculative fiction' Actual genre: ['Science Fiction', "Children's literature", 'Fantasy', 'Speculative fiction'] Book: Sacred Clowns Predicted genre:  Actual genre: ['Mystery', 'Speculative fiction'] Book: Charlie and the Chocolate Factory Predicted genre: 'Fiction', Actual genre: ["Children's literature", 'Fantasy', 'Speculative fiction', 'Fiction'] Book: The Last Continent Predicted genre: 'Fantasy', 'Speculative fiction' Actual genre: ['Science Fiction', 'Speculative fiction', 'Fantasy', 'Fiction'] Book: The Atlantis Revelation Predicted genre:  Actual genre: ['Novel'] Book: Blitzcat Predicted genre:  Actual genre: ['Historical novel'] Book: The God of the Hive Predicted genre: 'Fiction', Actual genre: ['Detective fiction'] Actual genre: ['Alternate history', 'Science Fiction', 'Speculative fiction'] Book: The Parched Sea Predicted genre:  Actual genre: ['Speculative fiction', 'Fantasy', 'Fiction'
+</p>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large">
+  <p>Buy books here : <a href="https://www.amazon.com/b?node=283155" target="_blank" class="w3-hover-text-green">Amazon</a></p>
+</footer>
+
+</body>
+</html>
